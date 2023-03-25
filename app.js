@@ -10,7 +10,7 @@ const {auth}=require("./authentication/auth")
 dotenv.config()
 const app=express()
 
-const reactUrl = process.env.REACT_URL
+const reactUrl = process.env.REACT_URL || "https://reliable-stardust-ab5d37.netlify.app/"
 
 // DB Connection
 mongoose.connect(process.env.MONGO_URI).then(()=>console.log("DB Connected"))
